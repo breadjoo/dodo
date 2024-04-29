@@ -1,0 +1,31 @@
+package chap14.sec04;
+
+public class ThreadNameExample {
+
+	public static void main(String[] args) {
+		Thread mainThread = Thread.currentThread();
+		System.out.println(mainThread.getName() + " 실행");
+		
+		for(int i=0;i<3;i++) {
+			Thread threadA = new Thread() {
+				public void run () {
+					System.out.println(getName() + " 실행");
+				}
+			};
+			
+		threadA.start(); // 생성된 작업 thread의 run() method 실행
+		
+		Thread chatThread = new Thread() {
+			public void run() {
+				System.out.println(getName()+"실행");
+			}
+		
+		};
+
+		chatThread.setName("chat-Thread");
+		chatThread.start();
+
+	}
+
+}
+}
