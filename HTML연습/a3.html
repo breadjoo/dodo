@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>트랜스폼 실습</title>
+  <style type="text/css">
+    .box1{width:100px;height:100px;background-color: pink;
+          transform:matrix(2,0.5,0.5,2,310,100);}
+    .box2{width:100px;height:100px;background-color: skyblue;
+          transform : translate(100px,100px) rotate(45deg) scale(3,2);
+          transform-origin:0 50%;/*기준점 설정을 left로 지정*/}
+  </style>
+</head>
+<body>
+  <div class="box1"> 박스 1</div>
+  <div class="box2"> 박스 2</div>
+  <p>matrix속성은 한번에 5개의 값을 지정하여 사용
+     (1,0,0,1,0,0) 기본값 ==>
+      matrix(scaleX,skewX,skewY,scaleY,translateX,translateY)
+  </p>
+  <p>scale 속성 : 요소의 너비와 높이를 변형시키는 역할을 수행</p>
+  <p>rotate 속성 : 요소의 허전을 시키는 역할을 수행함  
+    rotate 속성의 값으로는 각도의 단위인 deg(degree)를 값으로 사용하고,
+    플러스 값은 시계 방향, 마이너스 값은 반시계 방향으로 회전함을 의미함</p>
+  <p>skew 속성 : 요소를 기울이는 역할을 수행함 
+    skew속성의 값으로는 각도의 단위인 deg(degree)를 값으로 사용하고,
+    가로와 세로를 기울이는 값이 다를수 있으므로 두 개의 값을 각각 지정함 </p>
+  <p> transform-origin 속성 : X좌표와 Y좌표를 나타내는 두 개의 값을 가지며,
+    기본 값은 50%, 50%임</p>
+  <p> transform-origin : right는 100% 50%
+    top은 50% 0 지정, bottom은 50% 100%, center는 50% 50% 지정
+  </p>
+  
+</body>
+</html>

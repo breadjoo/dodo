@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style type="text/css">
+    @keyframes testAnimation{
+      0% {width:100px;left:0px; background:skyblue;}
+      30% {width:150px;left:50px; background:burlywood;}
+      50% {width:200px;left:100px; background:pink;}
+      80% {width:250px;left:150px; background:goldenrod;}
+      100% {width:300px;left:200px; background:greenyellow;}
+    }
+    div {width:100px;height: 150px;background:skyblue;
+      position:relative;
+      animation-name : testAnimation;  
+      animation-duration : 5s;
+      animation-delay : 0.5s;
+      animation-timing-function:ease-out;/*프레임변화속도*/
+      animation-direction: alternate;/*연결방향*/
+      animation-iteration-count: infinite;/*반복횟수*/}
+  </style>
+</head>
+<body>
+  <div> Animation 지정  <br>
+    @keyframes<br> 
+  0% {시작~ }<br>
+  0~100% {중간} <br>
+  100% {종료~} </div>
+</body>
+</html>

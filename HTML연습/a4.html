@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style type="text/css">
+    @keyframes testAnimation {
+      from{width:150px; background: skyblue;}
+      to{width: 300px;background: pink;}
+    }
+    div {width:150px;height: 150px;background: skyblue;
+        animation-name:testAnimation;
+        animation-duration: 3s;
+        animation-timing-function: ease-out;
+        /*ease-out: 애니메이션이 느리게 나타남*/
+        animation-iteration-count: infinite;
+        /*반복횟수 지정 */
+        animation-direction: normal;}
+        /*진행방향 (노말은 from -> to)*/
+  </style>
+</head>
+<body>
+  <div> Animation 지정  <br>
+  @keyframs<br> 
+from {시작~ }<br>
+to {종료~} </div>
+  
+  
+</body>
+</html>
