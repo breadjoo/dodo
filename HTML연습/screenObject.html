@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>location Object</title>
+<style>
+  #container {
+    width:400px;
+    margin:10px auto;
+  }
+  .display {
+    margin-top: 10px;
+    padding:10px;
+    border:1px solid #222;
+    box-shadow: 1px 0 1px #Ccc;
+  }
+  p {
+    font-size:1em;
+  }
+</style>
+</head>
+<body>
+  
+  <div id = "container">
+    <h1>Screen 객체</h1>
+    <div class = "display">
+      <script>
+      document.write("<p><b>screen.availWidth : </b>" + screen.availWidth+"</p>");
+      document.write("<p><b>screen.availHeight : </b>" + screen.availHeight+"</p>");
+      document.write("<p><b>screen.width : </b>" + screen.width+"</p>");
+      document.write("<p><b>screen.height : </b>" + screen.height+"</p>");
+      </script>
+    </div>
+  </div>
+  <!-- screen 객체 : 현재 사용하는 사용자의 화면 크기, 화면 정보를 다룸
+        1)availWidth : UI(작업표시줄) 영역을 제외한 내용 표시 영역의 너비
+        2)availHeight : UI(작업표시줄) 영역을 제외한 내용 표시 영역의 폭
+        3)width : UI영역을 포함한 화면의 너비
+        4)heiht : UI영역을 포함한 화면의 폭
+  -->
+</body>
+</html>

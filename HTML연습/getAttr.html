@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>getAttribute</title>
+  <link rel="stylesheet" href="css/product.css">
+</head>
+<body>
+  <div id = "container">
+    <h1 id = "heading">이미지에 대한 설명</h1>
+    <div id = "prod-pic">
+      <img src="/img/img.jpg" alt="캐릭터"
+            id="cup" width="200" height="200" onclick="displaySrc()">
+    </div>
+  </div>
+  <script>
+    function displaySrc() {
+      let cup = document.querySelector("#cup") ; //id가 cup인 요소에 접근
+      alert("img src : " + cup.getAttribute("src"));//cup 속성을 알림창에 표시
+    }                       //이미지의 경로 속성을 가져와 알림창에 표시
+  </script>
+  
+</body>
+</html> 

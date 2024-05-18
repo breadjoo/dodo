@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #container {
+      width:400px;
+      margin: 10px auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <img src="img/img2.png" id="cup">
+  </div>
+  
+  <script>
+    var cup = document.getElementById("cup");
+    cup.onclick = function(event) {
+    alert("클릭한 이미지 파일 : " + this.src);
+    // event 객체에는 이벤트 정보만 들어 있음
+    // 이벤트가 발생한 대상에 접근하려면 이벤트 처리기에서 this를 사용함
+  }
+  </script>
+</body>
+</html>

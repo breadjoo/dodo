@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #container {
+      width: 30px;
+      margin: 10px auto;
+    }
+  </style>
+</head>
+<body>
+  <div id = "container">
+    <img src="img/img.jpg" id="cup">
+    
+  </div>
+  <script>
+    
+    let cup = document.querySelector("#cup");
+    cup.onclick = changePic;//cup을 클릭하면 function 작동
+    function changePic(){
+      cup.src = "img/img3.jpg" ;
+    }
+    
+  
+  </script>
+  <!-- 함수 이름을 사용해 연결하기
+      함수를 따로 정의해 놓았다면 DOM 요소에 함수 이름을 사용해 연결
+    ==> 이 때 함수이름 다음에 괄호를 추가하지 않음-->
+</body>
+</html>

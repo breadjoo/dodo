@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id ="container">
+    <img src="img/img2.png" id="cup">
+  </div>
+  <script>
+    let cup = document.querySelector("#cup");
+    cup.onclick = function(event){
+      alert("이벤트 유형 : " + event.type + ", 이벤트 발생 위치 : " + event.pageX+
+        ","+event.pageY);
+        //이미지 요소를 클릭하면 그 위치를 확인하기 위해
+    }
+  </script>
+  <!-- event.type : 발생한 이벤트의 이름을 반환
+      event.pageX : 현재 문서 기준으로 이벤트가 발생한 가로 위치 반환
+      evnet.pageY : 세로 위치 반환
+
+
+  -->
+  
+</body>
+</html>
