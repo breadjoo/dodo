@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouseover img test</title>
+  <style>
+    #container{
+      width: 400px;
+      margin: 10px auto;
+    }
+
+  </style>
+</head>
+<body>
+  <div id = "container">
+    <img src="/img/img5.png" id="anko">
+  </div>
+  <script>
+    let cover = document.querySelector("anko");
+    cover.addEventListener("mouseover", function() {
+      cover.src = "/img/img4.jpg";
+    });
+    cover.addEventListener("mouseout", function() {
+      cover.src = "/img/img5.png";
+    });
+  </script>
+  
+</body>
+</html>
