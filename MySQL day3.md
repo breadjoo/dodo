@@ -17,6 +17,7 @@ MySQL 3일차
 ## 필드 삭제하기
     delete from newTable where id in (select id from 고객 where name = '홍길동'); // newTable에 있는 id 1개 삭제 ,
     삭제할 id 정보 : 고객 테이블의 홍길동 이름을 갖고있는 사람.
+    delete from 고객 where name ='변사또' ; // 고객 테이블의 변사또 이름 필드 전부 삭제
 
 
 ## 릴레이션
