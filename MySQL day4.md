@@ -50,6 +50,10 @@ MySQL 4일차
     values('pear1','변사또','gold')
     on duplicate key update name = '이몽룡'; //
     id(key)가 중복된다면 name 을 변사또->이몽룡 으로 변경해서 입력
+## check option
+    create view 우수고객 as select id, name, age, grade from customer
+    where grade = 'gold' with check option;
+    //간단하게 말해서 이렇게 해두면 gold 회원 외에는 추가 입력이 안됨.
 
 ## table 만들기 new ver
     create table 수강 ( 
