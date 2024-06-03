@@ -127,3 +127,33 @@
         // order테이블의 orderid와 customer 테이블의 id를 비교해서 일치하는 데이터 자동입력
     end $$
     delimiter ;
+
+## procedure를 이용해서 order에 insert할 때 ! customer에 자동 업데이트 해주는 트리거
+        drop trigger if exists pointTrg;
+        delimiter $$
+        create trigger pointTrg
+        after insert
+        on order1
+        for each row
+        begin
+        	update customer set point = point+ new.total*0.02 where id=new.orderid;    
+        -- update customer as o join order1 as j
+        --  set o.point =(j.orderAmount*j.price*0.02)+o.point where o.id = j.orderID; // 이것도 가능은함
+        end $$
+        delimiter ;
+## procedure를 이용해서 order에 insert할 때 ! product에 남은 물량 빼주는 트리거
+        drop trigger if exists productAmountTrg;
+        delimiter $$
+        create trigger productAmountTrg
+        	after insert
+            on order1
+            for each row
+        begin
+        	update product set pAmount = pAmount-new.orderAmount where pNum=new.pNum;
+        end $$
+        delimiter ;
+
+## trigger문에서 point적립이 잘 안된 이유와 해결방법
+        1. 내가만들어둔 프로시저는 insert 후에 update를 하므로 트리거에서 new키워드를 받아서 사용할 수 없다.
+        2. 현재로써 아는 방법은 프로시저 입력할 때 amount와 price까지 같이 입력을 해서 두가지 다 new키워드로 받으면 된다.
+        3. 실제로는 가격과 갯수를 직접 수작업으로 입력하는것이 아니라 버튼 등으로 할것이기 때문에 나쁜방법은 아닌것같다.
